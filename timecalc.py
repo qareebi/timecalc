@@ -3,7 +3,7 @@ import wave                                                 #add flac support ?
 import contextlib
 import csv
 
-def sec_to_hmsms(tins):
+def sec_to_hmsms(tins): #h:m:s:ms
     return ("{}:{}:{}:{}".format(int(tins/3600),int((tins%3600)/60),int(tins%60),int(((tins%1)*1000))))
 
 audio_dir = [a for a in os.listdir() if a.endswith(".wav")] #directory to run time calc in, only reads .wavs, can be edited to read .flac later too
